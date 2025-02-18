@@ -19,6 +19,7 @@ root.render(
 answer: render() method can't render more than one element. So, it will give an error. To fix the issue we need to wrap the `h1` and `p` tag in a parent element. You can render 1 parent element at a time. That parent element can have as many children elements as you want.
 
 4. What does it mean for something to be `declarative` instead of `imperative`?
+
 answer: *Imperative* means we need to give specific step-by-step instructions on how to accomplish a task. 
 
 *Delcarative* means we can write our code to simple "describe" *what* should show up on the page and allow the rool (React, e.g) to handle the details on *how* to put those things on the page. 
