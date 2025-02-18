@@ -28,3 +28,35 @@ answer: *Imperative* means we need to give specific step-by-step instructions on
 5. What does it mean for something to be `composable`?
 
 answer: We have small pieces that we can put together to make something larger or greater than the individual pieces themselves. 
+
+
+6. What is a React Component ?
+
+answer: Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but work in isolation and return HTML.
+
+7. What's wrong with this code?
+```
+function myComponent() {
+    return (
+        <small>I'm tiny text!<small/>
+    )
+}
+```
+
+answer: The above code is fine, but in order to create custom component we've to give the first letter must be capitalize
+
+
+8. What's wrong with this code?
+```
+function Header() {
+    return (
+        <header>
+            <img src={reactImg} with={40}>
+        <header>
+    )
+}
+
+root.render(Header())
+```
+
+answer: Well, it's a component so it should be called using self closing tag (root.render(<Header />))
