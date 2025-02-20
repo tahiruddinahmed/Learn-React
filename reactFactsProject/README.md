@@ -1,65 +1,49 @@
-# Creating my first React Project 
+# Create ReactFats 
 
-## Step 1
-create a image element and render a react logo to it. 
+## Project Setup 
+
+ - Create an app component in a seprate App.jsx file which is a sibling to this index.jsx file. 
+ - Create a `component` folder
+ - create the following components in a seprate files inside the components folder. In each one, just render an `h1` with the name of the component (e.g, return `<h1> navbar goes here<h1/>`);
+     - Navbar
+     - Main
+ 
+ - Have App component import and render the `Navbar` and `Main` components
+ - Import and render the App component inside of index.jsx using ReactDOM 
+    - At this point you should hvae your `Navbar goes here` etc. Showing up in the browser.
+
+ - Go to goole fonts and get the "inter" font with the weights 400, 600, and 700. Put the `<link />` to those fonts ABOVE the style.css link in index.html. You may need to do some extra research to figure out how this works if you haven't done it before.
 
 
-Hints: 
-    - The React Logo is a file in the project tree, so you can access it by using `src=/src/logo-name.png` in your image element 
-    - You can also set the `width` attribute of the image element just like in HTML. set its width to 40px
+## Styling Navbar 
 
-```
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
+ - for semantic HTML purposes, the Navbar should render a `<header>` with a `<nav>` nested inside. The image and "ReactFacts" text elements can both be rendered as children inside the `<nav>`
 
-createRoot(document.getElementById('root')).render(
-  <main>
-    <img src="/src/assets/react-logo.png" alt="" width={40} />
-    <h1>Fun facts about React!</h1>
-    <ul>
-      <li>Was first relaese in 2013</li>
-      <li>Was originally created by Jordan Walke</li>
-      <li>Has well over 200k stars on GitHub</li>
-      <li>Powers thousands of enterprise apps, including mobile apps</li>
-      <li>Is maintained by Meta</li>
-    </ul>
-  </main>
-)
+## Styling Main Content 
+ - For now, skip 2 aspects of the design and we'll work on them later: 
+    1. The colored bullets in the list
+    2. The larger gray Ract logo on the side
+
+## Coloring the bullets point: In the list 
 
 ```
-
-## Step 2 (Custom Component)
-### challenge (part 1)
- - create a custom `page` component
- - It should return an ordered list with the reasons why you're exited to be learning React
- - Render the page component
-
-My solution 👇
-in the `App.jsx' file I created a custom component called `Page`
-```
-function Page() {
-  return (
-    <ul>
-      <li>Was first relaese in 2013</li>
-      <li>Was originally created by Jordan Walke</li>
-      <li>Has well over 200k stars on GitHub</li>
-      <li>Powers thousands of enterprise apps, including mobile apps</li>
-      <li>Is maintained by Meta</li>
-    </ul>
-  )
+.facts-list > li {
+  padding-block: 10px;
+  line-height: 19px;
 }
 
-function App() {
- return (
-  <Page />
- )
+.facts-list > li::marker {
+  color: #61DAFB;
+  font-size: 1.5rem;
 }
 ```
 
-### Challenge (part 2)
- - Add a `<header>` element with an `<img />` element
- - Add an `<h1>` with some text describing the page. Place it above the ordered list, then wrap both the `<h1>` and `<ol>` inside a `<main>` element to keep our semantic structure flowing well. 
- - Add a `<footer>` after the list that says: 
-    "©️ 2025 <last name here> development. All rights reserved"
+
+## Add Background Image 
+
+Don't use an `img` element, but rather set it as the `background-image` of the main element. 
+
+Hint: you'll need to use the following properties: 
+    - background-image: url(...)
+    - background-repeat
+    - background-position

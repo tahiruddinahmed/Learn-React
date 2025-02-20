@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -24,10 +25,10 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: start;
+  padding: 0;
   min-width: 320px;
   min-height: 100vh;
+  font-family: "Inter", serif;
 }
 
 h1 {
@@ -52,6 +53,77 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+.header {
+ background-color: #1a1a1a;
+ padding: 30px 25px;
+ margin: 0;
+ width: 100%;
+ height: 40px;
+}
+
+.header nav {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  height: 100%;
+}
+
+.header-logo {
+  width: 40px;
+  margin-right: 7px;
+}
+
+.header-title {
+  color: #61DAFB;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+.nav-list {
+  list-style: none;
+  display: flex;
+}
+
+.nav-list-item {
+  margin-left: 10px;
+  font-size: 1.1rem;
+  transition: all .5s ease;
+}
+.nav-list-item:hover {
+  text-decoration: underline;
+  color: rgb(51, 202, 248);
+  cursor: pointer;
+}
+
+.main {
+  min-height: 100vh; /* Or any appropriate height */
+  padding: 60px 30px;
+  background-image: url("react-logo.png");
+  background-repeat: no-repeat;
+  background-position-x: right; 
+  background-position-y: 45%; 
+  background-size: 20%;
+  background-blend-mode: multiply;
+}
+
+.main > h1 {
+  margin: 0;
+  font-size: 2.4rem;
+}
+
+.facts-list {
+  margin-top: 46px;
+  max-width: 400px;
+}
+
+.facts-list > li {
+  padding-block: 10px;
+  line-height: 19px;
+}
+
+.facts-list > li::marker {
+  color: #61DAFB;
+  font-size: 1.5rem;
 }
 
 @media (prefers-color-scheme: light) {
