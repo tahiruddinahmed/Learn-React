@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: inter, sans-serif;
+}
+
+.header {
+  height: 108px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 11px;
+  box-shadow: 0 3px 2px 0px #0000000F;
+}
+
+.header > img {
+  width: 43px;
+  /* margin-right: 8px; */
+
+}
+
+.header > p {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+}
+
+/* design main content */
+.main {
+  padding: 40px 30px 10px;
+}
+
+.main > form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 11px;
+}
+
+.main > form > input {
+  border-radius: 6px;
+  border: 1px solid #D1D5DB;
+  padding: 9px 13px;
+  background-color: white;
+  box-shadow: 0px 2px 1px 0px #0000000D;
+  flex-grow: 1;
+  min-width: 150px;
+  max-width: 339px;
+}
+
+.main > form > input:active {
+  border: 1px solid #D1D5DB;
+}
+
+.main > form > button {
+  padding: 9px 17px;
+  border-radius: 6px;
+  border: 1px solid #D1D5DB;
+  background-color: #141413;
+  color: white;
+  cursor: pointer;
+  width: 150px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  box-shadow: 0px 2px 1px 0px #0000000D;
+}
+
+.main > form > button::before {
+  content: '+';
+  margin-right: 5px;
+}
