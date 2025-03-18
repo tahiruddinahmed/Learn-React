@@ -1,9 +1,20 @@
+import React, {useState} from "react";
 export default function Main() {
-    const ingrediants = ['Mango', 'Orange', 'Banana'];
 
-    const IngredientsListItems = ingrediants.map((item) => (
+    /**
+     * Challenge: Update our app so that when the user enters a
+     * new ingredient and submits the form, it adds that new
+     * ingredient to our list!
+     */
+
+    const [stateIngredients, setIngredients] = useState([])
+
+    // const ingrediants = ['Mango', 'Orange', 'Banana'];
+
+    const IngredientsListItems = stateIngredients.map((item) => (
         <li key={item}>{item}</li>
     ));
+
 
     function handleForm(e) {
         e.preventDefault();
@@ -11,7 +22,7 @@ export default function Main() {
 
         const formData = new FormData(e.currentTarget);
         const newIngredient = formData.get("ingredient");
-        console.log(newIngredient);
+        setIngredients((prevIngredient) => [...prevIngredient, newIngredient])
     }
 
     return (
