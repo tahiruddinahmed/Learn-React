@@ -29,15 +29,56 @@ label {
 
 }
 input {
-  width: 100%;
-  padding: 11px 0;
+  width: 96%;
+  padding: 11px 8px;
   border: none;
   border-radius: 5px;
   margin: 3px 0 15px 0;
+}
+
+
+textarea {
+  width: 97%;
+  min-height: 90px;
+  margin-bottom: 15px;
+  padding: 4px 5px;
 }
 
 button {
   width: 100%;
   padding: 0.7rem 0.8rem;
   cursor: pointer;
+}
+
+fieldset {
+  padding: 8px;
+  margin-bottom: 15px;
+}
+
+fieldset legend {
+  font-size: 21px;
+}
+div {
+  display: flex;
+  align-items: center; /* this ensures vertical centering */
+  gap: 5px;
+  margin-bottom: 8px;
+}
+
+input[type="radio"], input[type="checkbox"] {
+  width: auto;
+  cursor: pointer;
+}
+
+div label {
+  font-size: 18px;
+  line-height: 1; /* helps vertical alignment */
+}
+
+select {
+  width: 100%;
+  padding: 11px 8px;
+  border: none;
+  border-radius: 5px;
+  margin: 3px 0 15px 0;
 }
