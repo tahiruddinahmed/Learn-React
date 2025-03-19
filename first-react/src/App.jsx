@@ -5,13 +5,14 @@ import "./App.css";
 
 function App() {
   function signUp(formData) {
-    const email = formData.get("email");
-    const password = formData.get("password");
-    const desc = formData.get("desc");
-    const employementStatus = formData.get("employementStatus");
+    const data = Object.fromEntries(formData);
     const dietaryRestrictions = formData.getAll("dietaryRestrictions");
-    const favColor = formData.get("favColor");
-    console.log(email, password, desc, employementStatus, dietaryRestrictions, favColor);
+
+    const allData = {
+      ...data,
+      dietaryRestrictions
+    }
+    console.log(allData)
   }
 
   return (
