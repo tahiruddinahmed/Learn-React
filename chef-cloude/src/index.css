@@ -28,6 +28,7 @@ header > h1 {
 
 main {
   padding: 30px 30px 10px;
+  min-height: 100vh;
 }
 
 .add-ingredient-form {
@@ -110,4 +111,26 @@ ul.ingredients-list > li {
   font-family: Inter, sans-serif;
   font-size: 0.875rem;
   cursor: pointer;
+}
+
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background-color: white;
+  bottom: 0;
+}
+
+.footer p {
+  margin-bottom: 1px;
+  font-size: 16px;
+}
+
+.footer > p > a {
+  text-decoration: underline;
+  color: #c94f26;
+  font-weight: 500;
 }

@@ -13,8 +13,6 @@ export default function Main() {
     setIngredients((prevIngredient) => [...prevIngredient, newIngredient]);
   }
 
-    // api key = 
-
   async function getRecipe() {
     const generatedRecipe = await getRecipeFromMistral(stateIngredients)
     setRecipe(generatedRecipe)

@@ -3,6 +3,9 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
 
+
+
+
 function App() {
   function signUp(formData) {
     const data = Object.fromEntries(formData);
@@ -14,10 +17,11 @@ function App() {
     }
     console.log(allData)
   }
-
+  
   return (
     <section>
       <h1 className="heading">Sign Up Form</h1>
+      
       <form action={signUp}>
         <label htmlFor="email">Email</label>
         <input
