@@ -16,7 +16,7 @@ function App() {
 
     })
   }
-  const [isGameBegin, setIsGameBegim] = useState(false)
+  const [isGameBegin, setIsGameBegin] = useState(false)
   const [dices, setDices] = useState(() => generateNumbers());
   const [rollCount, setRollCount] = useState(0)
   const [timer, setTimer] = useState(0)
@@ -26,9 +26,18 @@ function App() {
   // if all the dices are held && all the values are same 
   const isGameOwn = dices.every(dice => dice.isHeld == true) && dices.every(dice => dice.value === dices[0].value)
 
+
+  // play again 
+  const playAgain = () => {
+    setIsGameBegin(true);
+    setDices(generateNumbers());
+    setRollCount(0)
+    setTimer(0)
+  }
+
   // start timer when the game begin
   useEffect(() => {
-    if(isGameBegin) {
+    if(isGameBegin && !isGameOwn) {
       const intervalId = setInterval(() => {
         setTimer(prevTime => prevTime + 1)
       }, 1000)
@@ -146,7 +155,7 @@ function App() {
       {!isGameBegin ? 
       <div className="flex justify-center items-center h-[200px]">
        <button
-          onClick={() => setIsGameBegim(prevValue => !prevValue)} 
+          onClick={() => setIsGameBegin(prevValue => !prevValue)} 
           className="group
             relative
             overflow-hidden
@@ -173,15 +182,14 @@ function App() {
           {/* Dice Grid */}
           <div className="grid grid-cols-5 gap-5 px-10 py-10">
             {dices.map((dice) => (
-            <Dice dice={dice} key={dice.id} click={handleClick}/>
-
+              <Dice dice={dice} key={dice.id} click={handleClick}/>
             ))}          
           </div>
 
           {/* CTA */}
           <div className="pb-10 flex justify-center">
             <button
-              onClick={rollDices}
+              onClick={ isGameOwn ? playAgain : rollDices}
               className="
             group
             relative
@@ -201,7 +209,7 @@ function App() {
             duration-300
           "
             >
-              Roll Dice
+             { isGameOwn ? 'Play Again!' : 'Roll Dice' }
             </button>
           </div>
         </div>
