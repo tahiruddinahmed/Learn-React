@@ -1,0 +1,10 @@
+button {
+  width: max-content;
+  padding: 6px 8px;
+  cursor: pointer;
+  text-align: center;
+}
+
+button:active {
+  border: 1px solid blue;
+}
