@@ -1,0 +1,17 @@
+export const Products = [
+    { id: 1, name: "Laptop", price: 50000 },
+    { id: 2, name: "Mouse", price: 1000 },
+    { id: 3, name: "Keyboard", price: 2000 },
+    { id: 4, name: "Monitor", price: 15000 },
+    { id: 5, name: "Headphones", price: 3000 },
+    { id: 6, name: "Webcam", price: 2500 },
+    { id: 7, name: "USB-C Hub", price: 1800 },
+    { id: 8, name: "External SSD", price: 7500 },
+    { id: 9, name: "Smartphone", price: 35000 },
+    { id: 10, name: "Tablet", price: 25000 },
+    { id: 11, name: "Smartwatch", price: 8000 },
+    { id: 12, name: "Bluetooth Speaker", price: 4000 },
+    { id: 13, name: "Microphone", price: 4500 },
+    { id: 14, name: "Router", price: 3200 },
+    { id: 15, name: "Power Bank", price: 1500 },
+];
